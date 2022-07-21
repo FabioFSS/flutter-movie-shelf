@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movie_shelf/widgets/topratedgrid.dart';
+import 'package:movie_shelf/widgets/trendinggrid.dart';
 
 class HomeTabBarView extends StatefulWidget {
   const HomeTabBarView({Key? key}) : super(key: key);
@@ -10,16 +12,37 @@ class HomeTabBarView extends StatefulWidget {
 class _HomeTabBarViewState extends State<HomeTabBarView> {
   @override
   Widget build(BuildContext context) {
-    return const TabBarView(
+    return TabBarView(
       children: [
-        Center(
-          child: Text("TV Shows"),
+        Column(
+          children: const [
+            TrendingGrid(
+              type: "tv_shows",
+            ),
+            TopRatedGrid(
+              type: "tv_shows",
+            ),
+          ],
         ),
-        Center(
-          child: Text("Movies"),
+        Column(
+          children: const [
+            TrendingGrid(
+              type: "movies",
+            ),
+            TopRatedGrid(
+              type: "movies",
+            ),
+          ],
         ),
-        Center(
-          child: Text("Games"),
+        Column(
+          children: const [
+            TrendingGrid(
+              type: "games",
+            ),
+            TopRatedGrid(
+              type: "games",
+            ),
+          ],
         ),
       ],
     );

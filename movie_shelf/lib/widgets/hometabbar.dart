@@ -20,15 +20,23 @@ class _HomeTabBarState extends State<HomeTabBar> {
         ),
         labelColor: Colors.white,
         unselectedLabelColor: const Color(0xFFA9D6E5),
+        labelStyle: const TextStyle(fontSize: 18),
+        unselectedLabelStyle: const TextStyle(fontSize: 16),
         tabs: const [
           Tab(
-            child: Text('TV Shows'),
+            child: Text(
+              'TV Shows',
+            ),
           ),
           Tab(
-            child: Text('Movies'),
+            child: Text(
+              'Movies',
+            ),
           ),
           Tab(
-            child: Text('Games'),
+            child: Text(
+              'Games',
+            ),
           ),
         ],
       ),
